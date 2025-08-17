@@ -1,0 +1,75 @@
+#Get All posts 
+GET http://localhost:3000/post/
+
+###
+
+
+#Post update 
+PUT http://localhost:3000/post/67436f4c5b95d41915b19ebf
+Content-Type: application/json
+
+{
+    "title":"Ofek's post 111",
+    "content":"Hello to my post update", 
+    "owner":"Ofek"
+}
+
+###
+
+#Create new comment 
+POST http://localhost:3000/comment
+Content-Type: application/json
+
+{
+    "post_id":"67712f24ef8ac1a042f90e94",
+    "content":"First comment on this post",
+    "owner":"Ofek A",
+    "date":"22.11.2024"
+}
+
+###
+
+#Get all comments of specific post
+GET http://localhost:3000/comment/67712f24ef8ac1a042f90e94
+
+###
+
+#Delete comment 
+DELETE http://localhost:3000/comment/67435f489619ac4504c2af1b
+
+###
+#CREATE NEW POST
+POST http://localhost:3000/post
+Content-Type: application/json
+
+{
+    "title":"Ofek's post",
+    "content":"Hello to my first post", 
+    "owner":"111"
+}
+
+###
+#DELETE POST
+DELETE http://localhost:3000/post/67436f4c5b95d41915b19ebf
+
+###
+#GET POST BY ID
+GET http://localhost:3000/post/67436f4c5b95d41915b19ebf
+
+###
+#UPDATE COMMENT
+PUT http://localhost:3000/comment/674370445b95d41915b19ecd
+Content-Type: application/json
+
+{
+    "content":"First comment on this post - updated",
+    "owner":"Ofek A",
+    "date":"22.11.2024"
+}
+
+###
+#GET POST BY OWNER
+GET http://localhost:3000/post?owner=111
+
+
+

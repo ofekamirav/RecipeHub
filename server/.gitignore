@@ -1,0 +1,11 @@
+node_modules/
+.env
+dist/
+coverage/
+.envprod
+.envdev
+client-cert.pem
+client-key.pem
+client.csr
+storage/*
+!storage/.gitkeep
